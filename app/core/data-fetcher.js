@@ -4,7 +4,7 @@ class DataFetcher {
             if (result.ok) {
                 return result.json();
             }
-            throw new Error(`Error happened: ${result.status}`);
+            throw new Error(`${result.status} (${result.statusText})`);
         })
     }
 
@@ -12,7 +12,7 @@ class DataFetcher {
         try {
             return await this.getData(url);
         } catch (err) {
-            throw new Error(`Something happened: ${err}`);
+            throw new Error(err);
         }
     }
 }
