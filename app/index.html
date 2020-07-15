@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github issues</title>
+</head>
+<body>
+<div id="query-options-block">
+    <form id="query-options-form">
+        https://github.com/
+        <input name="user" placeholder="user" value="facebook">
+        /
+        <input name="repo" placeholder="repo" value="react">
+        <button type="submit">Find</button>
+    </form>
+</div>
+
+<div id="issues-root"></div>
+<template id="issue-item">
+    <div class="issue">
+        <span class="number"></span>
+        <span class="date"></span>
+        <span class="title"></span>
+        <span class="body"></span>
+    </div>
+</template>
+
+<script src="core/data-fetcher.js"></script>
+<script src="core/data-renderer.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
